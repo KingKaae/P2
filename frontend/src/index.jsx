@@ -8,7 +8,9 @@ import NoPage from "./pages/NoPage";
 import FrontPage from "./pages/FrontPage";
 import Example from "./pages/Example";
 import FAQ from "./pages/FAQ";
-import Vendor from "./pages/Vendor";
+import Vendor from "./pages/Vendor/Vendor";
+import ProductCatalogue from "./pages/ProductCatalogue/Product-Catalogue";
+import AddProduct from "./pages/Vendor/Add-Product";
 
 export default function App() {
   return (
@@ -18,8 +20,11 @@ export default function App() {
           <Route index element={<FrontPage />} />
           <Route path="/example" element={<Example />} />
           <Route path="/FAQ" element={<FAQ />} />
-          <Route path="/Vendor" element={<Vendor />} />
+          <Route path="/Product-Catalogue" element={<ProductCatalogue />} />
         </Route>
+        {/* todo: add header to vendor route */}
+        <Route path="/vendor" element={<Vendor />} />
+        <Route path="/vendor/add-product" element={<AddProduct />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
